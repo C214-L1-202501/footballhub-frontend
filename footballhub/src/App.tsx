@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import Sidebar from './components/layout/Sidebar';
+import Header from './components/layout/Header';
+import MobileMenu from './components/layout/MobileMenu';
+import HomePage from './pages/HomePage';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Provider store={store}>
+      <Router>
+        <div className="h-screen flex overflow-hidden bg-gray-100">
+          <Sidebar />
+          <MobileMenu 
+            isOpen={mobileMenuOpen} 
+            onClose={() => setMobileMenuOpen(false)} 
+          />
+          <div className="flex flex-col w-0 flex-1 overflow-hidden">
+            <Header onMobileMenuClick={() => setMobileMenuOpen(true)} />
+            <main className="flex-1 relative overflow-y-auto focus:outline-none">
+              <div className="py-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                  </Routes>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </Router>
+      </Provider>
+  );
+};
 
-export default App
+export default App;
