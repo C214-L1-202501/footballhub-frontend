@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Country, Team, Player, Stadium, Championship, TeamParticipation } from '../types';
+import { type Country, type Team, type Player, type Stadium, type Championship, type TeamParticipation } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 

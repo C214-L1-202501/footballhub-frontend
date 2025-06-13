@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
   const popularTeams = teams.data.slice(0, 6);
 
   if (championships.loading || teams.loading) {
-    return <LoadingSpinner text="Loading football data..." />;
+    return <LoadingSpinner text="Carregando dados de futebol..." />;
   }
 
   if (championships.error || teams.error) {

@@ -6,6 +6,7 @@ import Sidebar from './components/layout/Sidebar';
 import Header from './components/layout/Header';
 import MobileMenu from './components/layout/MobileMenu';
 import HomePage from './pages/HomePage';
+import CountriesPage from './pages/CountriesPage';
 
 const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,6 +27,7 @@ const App: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                   <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/countries" element={<CountriesPage />} />
                   </Routes>
                 </div>
               </div>
