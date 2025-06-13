@@ -130,7 +130,7 @@ const TeamDetailPage: React.FC = () => {
                           <div>
                             <p className="text-sm font-medium text-gray-900">{player.name}</p>
                             <p className="text-sm text-gray-500">
-                              Data de Nascimento: {new Date(player.birth_date).toLocaleDateString()}
+                              {new Date().getFullYear() - new Date(player.birth_date).getFullYear()} anos
                             </p>
                           </div>
                         </div>
