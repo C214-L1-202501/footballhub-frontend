@@ -38,7 +38,7 @@ export interface Championship {
 
 export interface TeamParticipation {
   team: number;
-  championship: number;
+  championship_name: string;
   season: string;
 }
 
