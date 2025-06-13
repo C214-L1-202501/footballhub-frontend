@@ -45,16 +45,16 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold mb-4">Welcome to FootballHub</h1>
+          <h1 className="text-4xl font-bold mb-4">Bem-vindo ao FootballHub</h1>
           <p className="text-lg mb-6 opacity-90">
-            Your ultimate destination for football statistics, team information, and player profiles. 
-            Explore the world of football with comprehensive data at your fingertips.
+            Seu destino final para estatísticas de futebol, informações sobre equipes e perfis de jogadores.
+            Explore o mundo do futebol com dados abrangentes ao seu alcance.
           </p>
           <div className="max-w-md">
             <SearchBar
               value={searchQuery}
               onChange={setSearchQuery}
-              placeholder="Search teams, players, championships..."
+              placeholder="Pesquisar equipes, jogadores, campeonatos..."
               className="bg-white/20 backdrop-blur-sm"
             />
           </div>
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
             <Users className="h-6 w-6 text-blue-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">{teams.data.length}+</h3>
-          <p className="text-gray-600">Teams</p>
+          <p className="text-gray-600">Times</p>
         </Card>
         
         <Card className="text-center">
@@ -76,35 +76,27 @@ const HomePage: React.FC = () => {
             <Trophy className="h-6 w-6 text-green-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">{championships.data.length}+</h3>
-          <p className="text-gray-600">Championships</p>
+          <p className="text-gray-600">Campeonatos</p>
         </Card>
         
         <Card className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mx-auto mb-4">
             <TrendingUp className="h-6 w-6 text-purple-600" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">Live</h3>
-          <p className="text-gray-600">Statistics</p>
-        </Card>
-        
-        <Card className="text-center">
-          <div className="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg mx-auto mb-4">
-            <Star className="h-6 w-6 text-yellow-600" />
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900">Pro</h3>
-          <p className="text-gray-600">Analysis</p>
+          <h3 className="text-2xl font-bold text-gray-900">Estatísticas</h3>
+          <p className="text-gray-600">Ao Vivo</p>
         </Card>
       </div>
 
       {/* Major Championships */}
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Major Championships</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Campeonatos Principais</h2>
           <Link 
             to="/championships" 
             className="text-green-600 hover:text-green-700 font-medium"
           >
-            View All →
+            Ver Todos →
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -125,12 +117,12 @@ const HomePage: React.FC = () => {
       {/* Popular Teams */}
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Popular Teams</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Times Populares</h2>
           <Link 
             to="/teams" 
             className="text-green-600 hover:text-green-700 font-medium"
           >
-            View All →
+            Ver Todos →
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

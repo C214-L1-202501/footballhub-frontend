@@ -12,10 +12,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'Countries', href: '/countries', icon: Flag },
-    { name: 'Teams', href: '/teams', icon: Users },
-    { name: 'Players', href: '/players', icon: User },
-    { name: 'Championships', href: '/championships', icon: Trophy },
+    { name: 'Países', href: '/countries', icon: Flag },
+    { name: 'Times', href: '/teams', icon: Users },
+    { name: 'Jogadores', href: '/players', icon: User },
+    { name: 'Campeonatos', href: '/championships', icon: Trophy },
     { name: 'Admin', href: '/admin', icon: Settings },
   ];
 
