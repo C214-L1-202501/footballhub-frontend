@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import * as api from '../../services/api';
-import { Team, Player, TeamParticipation, ApiResponse } from '../../types';
+import { type Team, type Player, type TeamParticipation, type ApiResponse } from '../../types';
 
 interface TeamsState {
   teams: ApiResponse<Team[]>;

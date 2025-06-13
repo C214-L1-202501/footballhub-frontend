@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import * as api from '../../services/api';
-import { Player, ApiResponse } from '../../types';
+import { type Player, type ApiResponse } from '../../types';
 
 interface PlayersState {
   players: ApiResponse<Player[]>;
