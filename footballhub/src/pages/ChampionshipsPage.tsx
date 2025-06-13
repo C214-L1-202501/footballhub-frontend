@@ -33,7 +33,7 @@ const ChampionshipsPage: React.FC = () => {
 
   const championshipsByCountry = filteredChampionships.reduce((acc, championship) => {
     const country = countries.data.find(c => c.id === championship.country);
-    const countryName = country ? country.name : 'Desconhecido';
+    const countryName = country ? country.name : '2025';
 
     if (!acc[countryName]) {
       acc[countryName] = [];
@@ -94,7 +94,7 @@ const ChampionshipsPage: React.FC = () => {
               <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Trophy className="h-5 w-5 text-yellow-500 mr-2" />
                 {countryName}
-                <Badge variant="secondary" size="sm" className="ml-2">
+                <Badge variant="secondary" size="sm">
                   {countryChampionships.length}
                 </Badge>
               </h2>
