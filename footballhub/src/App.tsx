@@ -8,6 +8,7 @@ import MobileMenu from './components/layout/MobileMenu';
 import HomePage from './pages/HomePage';
 import CountriesPage from './pages/CountriesPage';
 import CountryDetailPage from './pages/CountryDetailPage';
+import TeamsPage from './pages/TeamsPage';
 
 const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/countries" element={<CountriesPage />} />
                     <Route path="/countries/:id" element={<CountryDetailPage />} />
+                    <Route path="/teams" element={<TeamsPage />} />
                   </Routes>
                 </div>
               </div>
